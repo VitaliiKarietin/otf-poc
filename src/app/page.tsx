@@ -1,9 +1,19 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import {
+  Carousel,
+  About,
+  StudiosCatalogue,
+  Catalogue
+} from "./containers";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={styles.topShadow}>
+      <Carousel />
+      <About />
+      <StudiosCatalogue />
+      <Catalogue />
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
