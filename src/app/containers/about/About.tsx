@@ -1,6 +1,6 @@
 "use client";
 import { Box, Typography } from "@mui/material";
-import { Container, ContentContainer } from "./styles";
+import { ActionsContainer, Container, ContentContainer } from "./styles";
 import { AnimatedLink } from "@/components/core";
 import { OutlinedLink } from "@/components/core/link/styles";
 
@@ -8,7 +8,7 @@ export const About = () => {
 	return (
 		<Container>
 			<ContentContainer>
-				<Box
+				<ActionsContainer
 					display="flex"
 					justifyContent="space-around"
 					mb="50px"
@@ -35,7 +35,7 @@ export const About = () => {
 							OTF ORIGINALS
 						</Typography>
 					</OutlinedLink>
-				</Box>
+				</ActionsContainer>
 				<Typography
 					fontFamily="revert"
 					fontSize={25}

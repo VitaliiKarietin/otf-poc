@@ -12,5 +12,6 @@ export const MenuList = styled("div")(() => ({
 
 export const CustomListItem = styled(ListItem)(() => ({
 	paddingTop: "15px",
-	paddingBottom: "10px"
+	paddingBottom: "10px",
+	cursor: "pointer"
 }))

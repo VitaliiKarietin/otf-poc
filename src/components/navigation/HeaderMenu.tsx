@@ -6,10 +6,13 @@ import {
 	Menu as MenuIcon,
 	Search as SearchIcon,
 } from "@mui/icons-material";
+import Link from "next/link";
+import Image from "next/image";
 import { Input } from "../core";
 import { MenuList } from "./styles";
 import { CustomDrawer } from "../core/drawer";
 import { SideMenuList } from "./SideMenuList";
+
 
 const menuItems = [
 	"OTF STUDIOS CATALOGUE",
@@ -24,7 +27,19 @@ export const HeaderMenu = () => {
 			<Box mt="14px">
 				<MenuList>
 					{menuItems.map((it) => (
-						<Typography fontSize={17} key={it}>{it}</Typography>
+						<Typography
+							fontSize={17}
+							key={it}
+							sx={{
+								cursor: "pointer",
+								display: {
+									xs: "none",
+									md: "block"
+								}
+							}}
+						>
+							{it}
+						</Typography>
 					))}
 					<IconButton
 						aria-label="drawer"
@@ -33,7 +48,17 @@ export const HeaderMenu = () => {
 						<MenuIcon color="action"/>
 					</IconButton>
 				</MenuList>
-				<Box display="flex" justifyContent="flex-end" mt="8px">
+				<Box
+					display="flex"
+					justifyContent="flex-end"
+					mt="8px"
+					sx={{
+						display: {
+							xs: "none",
+							md: "flex"
+						}
+					}}
+				>
 					<Input.Search />
 				</Box>
 			</Box>
@@ -41,10 +66,29 @@ export const HeaderMenu = () => {
 				open={open}
 				setOpen={setOpen}
 			>
-				<Box py="44px" px="50px" pl={0}>
+				<Box
+					sx={{
+						py: {
+							xs: "10px",
+							md: "44px"
+						},
+						pr: {
+							xs: "10px",
+							md: "50px"
+						}
+					}}
+				>
 					<MenuList>
 						{menuItems.map((it) => (
-							<Typography fontSize={17} key={it}>{it}</Typography>
+							<Typography
+								fontSize={17}
+								key={it}
+								sx={{
+									cursor: "pointer",
+								}}
+							>
+								{it}
+							</Typography>
 						))}
 						<IconButton
 							aria-label="drawer"
@@ -54,10 +98,30 @@ export const HeaderMenu = () => {
 						</IconButton>
 					</MenuList>
 					<Box
-						display="flex"
+						justifyContent="center"
+						sx={{
+							display: {
+								xs: "flex",
+								md: "none"
+							}
+						}}
+						mt="8px"
+						mb="20px"
+					>
+						<Link href="#">
+							<Image src="/OTF_logo.png" alt="OTF Logo" width={150} height={72.85} />
+						</Link>
+					</Box>
+					<Box
 						justifyContent="flex-end"
 						alignItems="center"
 						mt="5px"
+						sx={{
+							display: {
+								xs: "none",
+								md: "flex"
+							}
+						}}
 					>
 						<Box mr="68px">
 							<IconButton
@@ -70,6 +134,17 @@ export const HeaderMenu = () => {
 							</IconButton>
 						</Box>
 						<Input.Search hideIcon />
+					</Box>
+					<Box
+						justifyContent="center"
+						sx={{
+							display: {
+								xs: "flex",
+								md: "none"
+							}
+						}}
+					>
+						<Input.Search />
 					</Box>
 					<Box p={6}>
 						<SideMenuList />

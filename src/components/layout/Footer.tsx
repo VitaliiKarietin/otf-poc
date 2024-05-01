@@ -24,7 +24,7 @@ export const Footer = () => {
 				minHeight={360}
 			>
 				<Grid container spacing={2} columns={16}>
-					<Grid item xs={3}>
+					<Grid item xs={16} md={3}>
 						<Box maxWidth={200}>
 							<Image
 								src="/footer_logo_1.png"
@@ -50,8 +50,23 @@ export const Footer = () => {
 							/>
 						</Box>
 					</Grid>
-					<Grid item xs={9} display="flex">
-						<Box display="flex" flex={1} pl={4}>
+					<Grid
+						item
+						xs={16}
+						md={13}
+						lg={9}
+						display="flex"
+					>
+						<Box
+							display="flex"
+							flex={1}
+							sx={{
+								pl: {
+									xs: 0,
+									md: 4
+								}
+							}}
+						>
 							<Box flex={1}>
 								<Typography fontWeight={700}>amsterdam</Typography>
 								<Typography mb="8px" mt="10px" fontWeight={100} fontFamily="revert">
@@ -93,7 +108,15 @@ export const Footer = () => {
 							</Box>
 						</Box>
 					</Grid>
-					<Grid item xs={4}>
+					<Grid item xs={0} md={4}
+						sx={{
+							display: {
+								xs: "block",
+								md: "none",
+								lg: "block"
+							}
+						}}
+					>
 						<Box display="flex" flex={1} justifyContent="flex-end">
 							<Link href="https://twitter.com/offthefence">
 								<Twitter sx={{ fontSize: 42 }} color="action"/>
