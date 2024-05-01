@@ -1,2 +1,2 @@
-export * from "./Link";
-export * from "./AnimatedLink";
+export { CustomLink } from "./Link";
+export { AnimatedLink } from "./AnimatedLink";
