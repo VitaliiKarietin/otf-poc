@@ -18,6 +18,15 @@ export const Container = styled(Box)(({ theme }) => ({
 	},
 }));
 
+export const ActionsContainer = styled(Box)(({ theme }) => ({
+	display: "flex",
+	justifyContent: "space-around",
+	mb: "50px",
+	[theme.breakpoints.down(639)]: {
+		flexDirection: "column"
+	},
+}));
+
 export const ContentContainer = styled(Box)(({ theme }) => ({
 	margin: "0 auto",
 	[theme.breakpoints.down(1007)]: {

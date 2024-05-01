@@ -18,14 +18,20 @@ export const CustomDrawer = ({ open, setOpen, children }: CustomDrawerProps) => 
 				hideBackdrop
 				PaperProps={{
 					sx: {
-						backgroundColor: "rgba(15,42,51,0.9)",
+						backgroundColor: {
+							xs: "rgba(15,42,51, 1)",
+							md: "rgba(15,42,51,0.9)"
+						},
 						backgroundImage: "none"
 					}
 				}}
 				sx={{
 					position: "absolute",
 					"& .MuiPaper-root": {
-						width: 630,
+						width: {
+							xs: "100%",
+							md: 630
+						},
 						height: "100%",
 						position: "absolute"
 					},
