@@ -35,6 +35,7 @@ export const Footer = () => {
 								}}
 								width={200}
       					height={27.48}
+								priority
 							/>
 						</Box>
 						<Box maxWidth={75} mt="30px">
@@ -47,6 +48,7 @@ export const Footer = () => {
 								}}
 								width={200}
 								height={27.48}
+								priority
 							/>
 						</Box>
 					</Grid>

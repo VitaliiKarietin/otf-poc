@@ -39,7 +39,7 @@ export const Header = () => {
 				}}
 			>
 				<Link href="#">
-					<Image src="/OTF_logo.png" alt="OTF Logo" width={150} height={72.85} />
+					<Image src="/OTF_logo.png" alt="OTF Logo" priority width={150} height={72.85} />
 				</Link>
 			</Box>
 			<Box>
@@ -55,7 +55,7 @@ export const Header = () => {
 				}}
 			>
 				<Link href="#">
-					<Image src="/OTF_logo.png" alt="OTF Logo" width={150} height={72.85} />
+					<Image src="/OTF_logo.png" alt="OTF Logo" priority width={150} height={72.85} />
 				</Link>
 			</Box>
 		</Box>

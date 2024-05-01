@@ -109,7 +109,7 @@ export const HeaderMenu = () => {
 						mb="20px"
 					>
 						<Link href="#">
-							<Image src="/OTF_logo.png" alt="OTF Logo" width={150} height={72.85} />
+							<Image src="/OTF_logo.png" alt="OTF Logo" width={150} height={72.85} priority />
 						</Link>
 					</Box>
 					<Box
